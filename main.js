@@ -10,18 +10,18 @@
 
 $( document ).ready(function() {
 
-  var menu = $('div.hamburger-menu');
+  // isolo l'icona a forma di hamburger e la classe hamburger-menu
+  var menu = $('.header-right > a i');
+  var menuAperto = $('.hamburger-menu');
 
+  // al click del hamburger mostriamo la x menu
   menu.click(function() {
-    // <i class="fas fa-times"></i>
-    // menu.hide();
-    alert('you clicked');
-
-
-
-
+    menuAperto.show();
   });
 
-
+  // al click di nuovo chiudiamo il menu ad x
+  menuAperto.click(function() {
+    menuAperto.hide();
+  });
 
 });
